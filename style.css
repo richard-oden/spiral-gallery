@@ -1,0 +1,129 @@
+* {
+    background: black;
+}
+
+body {
+    background: black;
+    width: 90vh; height: 90vh;
+    margin: 5vh auto;
+    perspective: 600px;
+    display: grid;
+    grid: repeat(9, 1fr) / repeat(9, 1fr);
+    grid-gap: 4px;
+    grid-template-areas: 
+    "a a a a a a a a b"
+    "d e e e e e e f b"
+    "d h i i i i j f b"
+    "d h l m m n j f b"
+    "d h l p q n j f b"
+    "d h l p o o j f b"
+    "d h l k k k k f b"
+    "d h g g g g g g b"
+    "d c c c c c c c c";
+}
+
+.thumbnail {
+    border: solid black 1px;
+    position: relative;
+    background: lightslategrey no-repeat center;
+    background-size: 80vh auto;
+    transition: 
+        transform .3s ease-in-out, 
+        background-position .6s ease-in-out
+}
+
+.thumbnail:nth-child(even) {
+    background-size: auto 80vh;
+}
+
+.thumbnail:hover {
+    z-index: 1;
+    transform: translateZ(60px);
+    background-position: 65% 65%;
+    cursor: pointer;
+}
+
+#a {
+    grid-area: a;
+    background-image: url(https://picsum.photos/600/800?random=1);
+}
+
+#b {
+    grid-area: b;
+    background-image: url(https://picsum.photos/800/600?random=2);
+}
+
+#c {
+    grid-area: c;
+    background-image: url(https://picsum.photos/600/800?random=3);
+}
+
+#d {
+    grid-area: d;
+    background-image: url(https://picsum.photos/800/600?random=4);
+}
+
+#e {
+    grid-area: e;
+    background-image: url(https://picsum.photos/600/800?random=5);
+}
+
+#f {
+    grid-area: f;
+    background-image: url(https://picsum.photos/800/600?random=6);
+}
+
+#g {
+    grid-area: g;
+    background-image: url(https://picsum.photos/600/800?random=7);
+}
+
+#h {
+    grid-area: h;
+    background-image: url(https://picsum.photos/800/600?random=8);
+}
+
+#i {
+    grid-area: i;
+    background-image: url(https://picsum.photos/600/800?random=9);
+}
+
+#j {
+    grid-area: j;
+    background-image: url(https://picsum.photos/800/600?random=10);
+}
+
+#k {
+    grid-area: k;
+    background-image: url(https://picsum.photos/600/800?random=11);
+}
+
+#l {
+    grid-area: l;
+    background-image: url(https://picsum.photos/800/600?random=12);
+}
+
+#m {
+    grid-area: m;
+    background-image: url(https://picsum.photos/600/800?random=13);
+}
+
+#n {
+    grid-area: n;
+    background-image: url(https://picsum.photos/800/600?random=14);
+}
+
+#o {
+    grid-area: o;
+    background-image: url(https://picsum.photos/600/800?random=15);
+}
+
+#p {
+    grid-area: p;
+    background-image: url(https://picsum.photos/800/600?random=16);
+}
+
+#q {
+    grid-area: q;
+    background-image: url(https://picsum.photos/600/800?random=17);
+}
