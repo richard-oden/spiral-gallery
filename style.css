@@ -3,9 +3,8 @@
 }
 
 body {
-    background: black;
-    width: 90vh; height: 90vh;
-    margin: 5vh auto;
+    width: 90vmin; height: 90vmin;
+    margin: 4vmin auto;
     perspective: 600px;
     display: grid;
     grid: repeat(9, 1fr) / repeat(9, 1fr);
@@ -26,21 +25,27 @@ body {
     border: solid black 1px;
     position: relative;
     background: lightslategrey no-repeat center;
-    background-size: 80vh auto;
-    transition: 
-        transform .3s ease-in-out, 
-        background-position .6s ease-in-out
+    background-size: 80vmin auto;
+    transition: all 0.4s ease-in-out;
 }
 
 .thumbnail:nth-child(even) {
-    background-size: auto 80vh;
+    background-size: auto 80vmin;
 }
 
 .thumbnail:hover {
     z-index: 1;
-    transform: translateZ(60px);
+    transform: translateZ(40px);
     background-position: 65% 65%;
     cursor: pointer;
+}
+
+.pop-out {
+    position: absolute;
+    z-index: 2;
+    top: 50%; left: 50%;
+    height: 50vmin; width: 50vmin;
+    transform: translateZ(60px);
 }
 
 #a {
