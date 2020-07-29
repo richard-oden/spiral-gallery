@@ -23,29 +23,29 @@ body {
 
 .thumbnail {
     border: solid black 1px;
-    position: relative;
     background: lightslategrey no-repeat center;
-    background-size: 80vmin auto;
+    background-size: 100vmin auto;
     transition: all 0.4s ease-in-out;
 }
 
 .thumbnail:nth-child(even) {
-    background-size: auto 80vmin;
+    background-size: auto 100vmin;
 }
 
 .thumbnail:hover {
     z-index: 1;
-    transform: translateZ(40px);
     background-position: 65% 65%;
     cursor: pointer;
 }
 
-.pop-out {
-    position: absolute;
-    z-index: 2;
-    top: 50%; left: 50%;
-    height: 50vmin; width: 50vmin;
-    transform: translateZ(60px);
+.thumbnail.expand-width {
+    background-size: auto 85vmin;
+    width: 30vmin;
+}
+
+.expand-height {
+    background-size: 85vmin auto;
+    height: 30vmin;
 }
 
 #a {
